@@ -1,0 +1,594 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #FFFFFF;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+}
+
+.screen {
+    background-color: #D3D3D3;
+    border: 2px solid #FFFFFF;
+    border-radius: 0px;
+    padding: 20px;
+    text-align: center;
+    width: 50%;
+    height: 100%;
+    max-width: 500px;
+    max-height: 600px;
+    min-width: 350px;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+}
+
+.content-container {
+    background-color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    border-radius: 10px;
+    padding: 15px;
+    width: 80%;
+    height: 80%;
+    max-width: 400px;
+    max-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 156px 50px;
+}
+
+.language-toggle {
+    position: absolute;
+    top: 95px;
+    left: 85px;
+}
+
+#language-toggle {
+    background-color: #D3D3D3;
+    color: #000;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+#language-toggle:hover {
+    background-color: #C0C0C0;
+}
+
+#language-toggle:active {
+    background-color: #A9A9A9;
+}
+
+.menu-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#menu-button {
+    background-color: #D3D3D3;
+    color: #000;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+#menu-button:hover {
+    background-color: #C0C0C0;
+}
+
+#menu-button:active {
+    background-color: #A9A9A9;
+}
+
+.sound-toggle {
+    position: absolute;
+    top: 10px;
+    right: 50px;
+}
+
+#sound-button {
+    background-color: #D3D3D3;
+    color: #000;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+#sound-button:hover {
+    background-color: #C0C0C0;
+}
+
+#sound-button:active {
+    background-color: #A9A9A9;
+}
+
+#home-screen h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #000;
+}
+
+#home-screen button,
+#difficulty-screen button,
+#custom-settings-screen button,
+#game-screen button {
+    background-color: #D3D3D3;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 10px 0;
+    display: block;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all 0.3s ease;
+}
+
+#home-screen button:hover,
+#difficulty-screen button:hover,
+#custom-settings-screen button:hover,
+#game-screen button:hover {
+    background-color: #C0C0C0;
+}
+
+#home-screen button:active,
+#difficulty-screen button:active,
+#custom-settings-screen button:active,
+#game-screen button:active {
+    background-color: #A9A9A9;
+}
+
+#difficulty-screen h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+#custom-settings-screen h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.setting {
+    margin: 15px 0;
+}
+
+.setting label {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.setting-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.setting-controls button {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    padding: 0;
+}
+
+.setting-controls span {
+    font-size: 1.2rem;
+    width: 50px;
+    text-align: center;
+    color: #000;
+}
+
+#game-screen h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #000;
+}
+
+#game-screen p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #000;
+}
+
+#restart-button {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: auto;
+}
+
+.grid {
+    display: grid;
+    gap: 0;
+    width: 80%;
+    height: 80%;
+    max-width: 400px;
+    max-height: 400px;
+    margin: 20px auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    border: none;
+}
+
+.grid-easy {
+    background-image: url('background.png');
+}
+
+.grid-normal {
+    background-image: url('background1.png');
+}
+
+.grid-hard {
+    background-image: url('background2.png');
+}
+
+.cell {
+    position: relative;
+}
+
+.cell:hover:not(.fly):not(.correct-cell):not(.incorrect-cell) {
+    background-color: #E0E0E0;
+}
+
+.cell:active:not(.fly):not(.correct-cell):not(.incorrect-cell) {
+    background-color: #B0B0B0;
+}
+
+.correct-cell {
+    background-color: rgba(0, 255, 0, 0.5);
+}
+
+.incorrect-cell {
+    background-color: rgba(255, 0, 0, 0.5);
+}
+
+.fly-game {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.fly-game img {
+    width: 100%;
+    height: 100%;
+}
+
+.target {
+    width: 30px;
+    height: 30px;
+    background-color: #00FF00;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+@media (max-width: 500px) {
+    .screen {
+        width: 80%;
+        height: 90%;
+        min-width: 300px;
+        min-height: 400px;
+    }
+    .content-container {
+        width: 90%;
+        height: 90%;
+    }
+    .grid {
+        width: 90%;
+        height: 90%;
+        max-width: 280px;
+        max-height: 280px;
+    }
+    .fly-game {
+        width: 50px;
+        height: 50px;
+    }
+    .target {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.fly-logo {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.fly-logo img {
+    width: 100%;
+    height: 100%;
+    animation: flyMove 2s infinite ease-in-out, flyRotate 0.5s infinite alternate ease-in-out;
+}
+
+@keyframes flyMove {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes flyRotate {
+    0% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(5deg);
+    }
+}
+
+@media (max-width: 500px) {
+    .fly-logo {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+#scorm-welcome-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    padding: 30px;
+    color: #fff;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    animation: fadeIn 1.5s ease-in-out;
+    border: 2px solid #fff;
+    overflow: hidden;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+#scorm-welcome-screen::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+    animation: rotate 10s infinite linear;
+    z-index: 0;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#scorm-welcome-screen>* {
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px #000;
+    color: #e74c3c;
+    font-family: 'Arial Black', sans-serif;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 10px #000;
+    color: #f1c40f;
+    font-family: 'Arial Black', sans-serif;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 1em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.score-section {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+#score-input {
+    padding: 5px;
+    margin-right: 10px;
+    width: 60px;
+    text-align: center;
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+#submit-score {
+    padding: 5px 15px;
+}
+
+#get-game-state {
+    margin-top: 20px;
+}
+
+#home-screen,
+#difficulty-screen,
+#custom-settings-screen,
+#game-screen {
+    display: none;
+}
+
+@media (max-width: 500px) {
+    #scorm-welcome-screen {
+        padding: 10px;
+    }
+    h1 {
+        font-size: 1.8em;
+    }
+    h2 {
+        font-size: 1.5em;
+    }
+    button {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+    #score-input {
+        width: 50px;
+        padding: 3px;
+    }
+}
+
+#scorm-welcome-screen button {
+    padding: 12px 25px;
+    margin: 10px;
+    font-size: 1.2em;
+    background: linear-gradient(45deg, #27ae60, #2ecc71);
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+#scorm-welcome-screen button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(45deg, #2ecc71, #27ae60);
+}
+
+#scorm-welcome-screen button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.score-section {
+    display: flex;
+    align-items: center;
+    margin: 30px 0;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.score-section span {
+    font-size: 1.2em;
+    margin-right: 15px;
+    color: #fff;
+    text-shadow: 1px 1px 5px #000;
+}
+
+#score-input {
+    padding: 8px;
+    margin-right: 15px;
+    width: 100px;
+    text-align: center;
+    background: #fff;
+    color: #333;
+    border: 2px solid #2ecc71;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    font-size: 1.1em;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+#score-input:focus {
+    border-color: #e74c3c;
+    box-shadow: 0 6px 15px rgba(231, 76, 60, 0.4);
+}
+
+#submit-score {
+    padding: 8px 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 500px) {
+    #scorm-welcome-screen {
+        padding: 15px;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    h2 {
+        font-size: 1.8em;
+    }
+    button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+    #score-input {
+        width: 80px;
+        padding: 6px;
+    }
+}
